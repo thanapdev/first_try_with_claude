@@ -13,14 +13,45 @@
 
   <header class="hero about-hero">
     <div class="hero-content">
-      <canvas id="avatar" width="128" height="128" aria-label="Generated profile avatar" role="img"></canvas>
+      <img id="avatar" src="https://github.com/thanapdev.png?size=256" alt="Thanapong's profile photo" width="128" height="128">
       <h1>Thanapong <span class="nickname">(tonphai)</span></h1>
       <p class="subtitle">University Student</p>
-      <a class="back-link" href="index.html">&larr; Back home</a>
+      <a class="ghost-link" href="index.html">&larr; Back home</a>
     </div>
   </header>
 
   <main>
+    <section class="gh-card" aria-labelledby="gh-name">
+      <div class="gh-info">
+        <h2 id="gh-name">Thanapong Yamkamol</h2>
+        <p class="gh-login">@thanapdev</p>
+        <p id="gh-bio" class="gh-bio"></p>
+        <ul class="gh-stats" id="gh-stats" hidden>
+          <li><strong id="gh-repos">–</strong> repos</li>
+          <li><strong id="gh-followers">–</strong> followers</li>
+          <li><strong id="gh-following">–</strong> following</li>
+        </ul>
+      </div>
+      <a class="gh-link" href="https://github.com/thanapdev" target="_blank" rel="noopener">View on GitHub</a>
+    </section>
+
+    <section class="contrib" aria-labelledby="contrib-title">
+      <h2 id="contrib-title">Contributions</h2>
+      <p id="contrib-total" class="contrib-total">Loading…</p>
+      <div class="contrib-scroll">
+        <div id="contrib-grid" class="contrib-grid" role="img" aria-label="GitHub contribution graph"></div>
+      </div>
+      <div class="contrib-legend" aria-hidden="true">
+        Less
+        <span class="contrib-cell"></span>
+        <span class="contrib-cell level-1"></span>
+        <span class="contrib-cell level-2"></span>
+        <span class="contrib-cell level-3"></span>
+        <span class="contrib-cell level-4"></span>
+        More
+      </div>
+    </section>
+
     <section class="features">
       <h2>What I'm into</h2>
       <div class="card-grid">
