@@ -1,6 +1,6 @@
 # First Try with Claude
 
-A simple landing page introducing what Claude can do — built with plain HTML, CSS, and JS (no frameworks, no build step).
+This repo is my first step with Claude: a landing page introducing what Claude can do — built with plain HTML, CSS, and JS (no frameworks, no build step).
 
 ## Run it
 
