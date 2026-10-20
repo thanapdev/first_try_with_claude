@@ -8,6 +8,24 @@
   --color-muted-foreground: #475569;
   --color-border: #ddd6fe;
   --color-ring: #7c3aed;
+  --color-icon-bg: #ede9fe;
+  --shadow-soft: 0 16px 32px -16px rgb(30 27 75 / 0.25);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #a78bfa;
+    --color-on-primary: #1e1b4b;
+    --color-accent: #22d3ee;
+    --color-background: #0f0b1e;
+    --color-foreground: #ede9fe;
+    --color-card: #1a1530;
+    --color-muted-foreground: #a5b4c8;
+    --color-border: #2e2650;
+    --color-ring: #a78bfa;
+    --color-icon-bg: #2e2650;
+    --shadow-soft: 0 16px 32px -16px rgb(0 0 0 / 0.6);
+  }
 }
 
 * {
@@ -36,6 +54,9 @@ a, button {
 .hero {
   text-align: center;
   padding: 96px 20px 64px;
+  background:
+    radial-gradient(600px 300px at 20% 0%, rgb(124 58 237 / 0.18), transparent 70%),
+    radial-gradient(500px 280px at 85% 10%, rgb(8 145 178 / 0.15), transparent 70%);
 }
 
 .eyebrow {
@@ -47,9 +68,15 @@ a, button {
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
   font-weight: 800;
-  margin: 12px 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 12px 0 16px;
+  background: linear-gradient(120deg, var(--color-primary), var(--color-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .subtitle {
@@ -75,6 +102,36 @@ a, button {
 #greet-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 24px -8px rgb(124 58 237 / 0.45);
+}
+
+#greet-btn:active {
+  transform: translateY(0) scale(0.97);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ghost-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 24px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  color: var(--color-foreground);
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 180ms ease, background 180ms ease;
+}
+
+.ghost-link:hover {
+  border-color: var(--color-primary);
+  background: var(--color-card);
 }
 
 #greet-msg {
@@ -113,14 +170,15 @@ main {
   padding: 28px 24px;
   text-align: left;
   opacity: 0;
-  transform: translateY(12px);
+  translate: 0 12px;
   animation: reveal 500ms ease forwards;
-  transition: transform 200ms ease, box-shadow 200ms ease;
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
 }
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 32px -16px rgb(30 27 75 / 0.25);
+  box-shadow: var(--shadow-soft);
+  border-color: var(--color-primary);
 }
 
 .card:nth-child(1) { animation-delay: 60ms; }
@@ -129,10 +187,13 @@ main {
 .card:nth-child(4) { animation-delay: 300ms; }
 
 .card-icon {
-  width: 28px;
-  height: 28px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border-radius: 12px;
+  background: var(--color-icon-bg);
   color: var(--color-primary);
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .card h3 {
@@ -148,7 +209,9 @@ main {
 
 .master {
   text-align: center;
-  background: var(--color-card);
+  background:
+    linear-gradient(135deg, rgb(124 58 237 / 0.08), rgb(8 145 178 / 0.08)),
+    var(--color-card);
   border: 1px solid var(--color-border);
   border-radius: 16px;
   padding: 48px 20px;
@@ -171,7 +234,7 @@ footer {
 @keyframes reveal {
   to {
     opacity: 1;
-    transform: translateY(0);
+    translate: 0 0;
   }
 }
 
@@ -179,7 +242,7 @@ footer {
   .card {
     animation: none;
     opacity: 1;
-    transform: none;
+    translate: none;
   }
   #greet-btn,
   .card {
@@ -190,9 +253,6 @@ footer {
 @media (max-width: 500px) {
   .hero {
     padding: 64px 20px 48px;
-  }
-  .hero h1 {
-    font-size: 2.2rem;
   }
 }
 
