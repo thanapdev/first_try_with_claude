@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero about-hero">
+    <div class="hero-content">
+      <canvas id="avatar" width="128" height="128" aria-label="Generated profile avatar" role="img"></canvas>
+      <h1>Thanapong <span class="nickname">(tonphai)</span></h1>
+      <p class="subtitle">University Student</p>
+      <a class="back-link" href="index.html">&larr; Back home</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="features">
+      <h2>What I'm into</h2>
+      <div class="card-grid">
+        <div class="card">
+          <svg class="card-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M3 9h18"></path><circle cx="7" cy="6" r="0.5"></circle></svg>
+          <h3>UI/UX Design</h3>
+          <p>I like friendly, forgiving interfaces — the kind that feel good to tap even before you know what they do.</p>
+        </div>
+      </div>
+
+      <div class="demo-card">
+        <p class="demo-label">Try a super-friendly toggle</p>
+        <button id="friendly-toggle" class="toggle" role="switch" aria-checked="false" aria-label="Friendly toggle example">
+          <span class="toggle-thumb"></span>
+        </button>
+        <p id="toggle-msg" role="status" aria-live="polite">Tap me — I'll react.</p>
+      </div>
+    </section>
+
+    <section class="master">
+      <h2>Currently learning</h2>
+      <p id="learning-text">Design systems &amp; motion design — making interfaces that feel alive, not just functional.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with HTML, CSS &amp; JS only — my first project with Claude</p>
+  </footer>
+
+  <script src="about.js"></script>
+</body>
+</html>

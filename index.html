@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hi, I'm Claude</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,10 +14,10 @@
   <header class="hero">
     <div class="hero-content">
       <p class="eyebrow">AI Assistant</p>
-      <h1>Hi, I'm Claude 👋</h1>
+      <h1>Hi, I'm Claude</h1>
       <p class="subtitle">Your friendly AI sidekick for coding, writing, and figuring stuff out.</p>
-      <button id="greet-btn">Say Hi</button>
-      <p id="greet-msg"></p>
+      <button id="greet-btn" type="button">Say Hi</button>
+      <p id="greet-msg" role="status" aria-live="polite"></p>
     </div>
   </header>
 
@@ -23,32 +26,37 @@
       <h2>What I can do</h2>
       <div class="card-grid">
         <div class="card">
-          <h3>💻 Write Code</h3>
+          <svg class="card-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          <h3>Write Code</h3>
           <p>Build apps, fix bugs, and explain code in plain English.</p>
         </div>
         <div class="card">
-          <h3>✍️ Write &amp; Edit</h3>
+          <svg class="card-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path></svg>
+          <h3>Write &amp; Edit</h3>
           <p>Draft emails, essays, stories, or polish your existing text.</p>
         </div>
         <div class="card">
-          <h3>🧠 Brainstorm</h3>
+          <svg class="card-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7c0 2.4 1.2 4 2.5 5.3.8.8 1.5 1.7 1.5 2.7v1h6v-1c0-1 .7-1.9 1.5-2.7C17.8 13 19 11.4 19 9a7 7 0 0 0-7-7Z"></path><line x1="9" y1="21" x2="15" y2="21"></line></svg>
+          <h3>Brainstorm</h3>
           <p>Help you think through ideas, plans, and tricky decisions.</p>
         </div>
         <div class="card">
-          <h3>📚 Explain Things</h3>
+          <svg class="card-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"></path></svg>
+          <h3>Explain Things</h3>
           <p>Break down complex topics into simple, clear answers.</p>
         </div>
       </div>
     </section>
 
     <section class="master">
-      <h2>Who is your master? 😏</h2>
+      <h2>Who is your master?</h2>
       <p id="master-text">Loading...</p>
     </section>
   </main>
 
   <footer>
-    <p>Made with HTML, CSS &amp; JS only — my first project with Claude 🚀</p>
+    <p>Made with HTML, CSS &amp; JS only — my first project with Claude</p>
+    <p><a class="back-link" href="about.html">About me &rarr;</a></p>
   </footer>
 
   <script src="script.js"></script>
